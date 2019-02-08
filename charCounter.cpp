@@ -8,17 +8,13 @@ int main(){
 	while(c = getchar()){
 		if(c == EOF)
 			break;
-		else{
-			if(isalpha(c)){
+		else if(isalpha(c)){
 				charCount[tolower(c) - 'a']++;
-				//std::cout << tolower(c) - 'a' << std::endl;
 			}
-		}
-
+		else{ continue; }
 	}
 	c = 'A';
 	for(i = 0; i < 26; i++){
-
 		std::cout << c++ << " : " << charCount[i] << std::endl;
 	}
 
